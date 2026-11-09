@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="title desc">
+  <title id="title">TorBridge</title>
+  <desc id="desc">Des arches imbriquées en forme d'oignon forment un pont au-dessus de l'eau : chaque couche est une arche du pont.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2a1745"/>
+      <stop offset="1" stop-color="#120a20"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
+
+  <!-- Couches de l'oignon = arches du pont -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="#b98ae8" stroke-width="18"
+      d="M100 340 C100 236 196 196 236 146 Q256 120 256 92 Q256 120 276 146 C316 196 412 236 412 340"/>
+    <path stroke="#9c6ad6" stroke-width="16"
+      d="M143.68 340 C143.68 265.12 212.8 236.32 241.6 200.32 Q256 181.6 256 161.44 Q256 181.6 270.4 200.32 C299.2 236.32 368.32 265.12 368.32 340"/>
+    <path stroke="#7d4fb8" stroke-width="14"
+      d="M187.36 340 C187.36 294.24 229.6 276.64 247.2 254.64 Q256 243.2 256 230.88 Q256 243.2 264.8 254.64 C282.4 276.64 324.64 294.24 324.64 340"/>
+  </g>
+
+  <!-- Piles -->
+  <g stroke="#7d4fb8" stroke-width="14" stroke-linecap="round">
+    <line x1="100" y1="352" x2="100" y2="392"/>
+    <line x1="412" y1="352" x2="412" y2="392"/>
+  </g>
+
+  <!-- Tablier du pont -->
+  <line x1="64" y1="340" x2="448" y2="340" stroke="#4fc47e" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- Paquets qui traversent -->
+  <g fill="#eafff2">
+    <circle cx="150" cy="340" r="5"/>
+    <circle cx="256" cy="340" r="5"/>
+    <circle cx="362" cy="340" r="5"/>
+  </g>
+
+  <!-- Eau -->
+  <g fill="none" stroke="#4b3470" stroke-width="8" stroke-linecap="round">
+    <path d="M136 414 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+    <path d="M196 440 q15 -8 30 0 t30 0 t30 0 t30 0" stroke-opacity="0.6"/>
+  </g>
+</svg>

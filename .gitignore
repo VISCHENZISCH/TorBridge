@@ -1,0 +1,28 @@
+# Binaire compilé
+/torbridge
+
+# Objets et artefacts de compilation
+*.o
+*.obj
+*.a
+*.so
+*.out
+*.d
+
+# Débogage / profilage
+core
+core.*
+vgcore.*
+*.dSYM/
+gmon.out
+
+# Éditeurs et IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Système
+.DS_Store
+Thumbs.db
