@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdint.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
@@ -26,9 +27,6 @@
 #define ressize sizeof(struct proxy_reponse)
 
 
-typedef unsigned char int8;
-typedef unsigned short int int16;
-typedef unsigned int int32 ;
 
 /*
 
@@ -40,10 +38,10 @@ typedef unsigned int int32 ;
  */
 
 struct proxy_request {
-    int8 vn;
-    int8 cd;
-    int16 dstport;
-    int32 dstip;
+    int8_t vn;
+    int8_t cd;
+    int16_t dstport;
+    int32_t dstip;
     unsigned char userid[8];
 };
 
@@ -58,10 +56,10 @@ typedef struct proxy_request Req;
  */
 
 struct proxy_reponse {
-   int8 vn;
-   int8 cd;
-   int16 _;
-   int32 __;
+   int8_t vn;
+   int8_t cd;
+   int16_t dstport;
+   int32_t dstip;
 };
 
 typedef struct proxy_reponse Res;

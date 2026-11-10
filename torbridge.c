@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Usage: %s <host> <port>\n",
             argv[0]
         );
-        return -1;
+        return EXIT_FAILURE;
     }
 
     host = argv[1];
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
     s = socket(AF_INET, SOCK_STREAM, 0);
     if (s < 0) {
         perror("socket");
-        return -1;
+        return EXIT_FAILURE;
     }
 
     sock.sin_family = AF_INET;
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
 
     if (connect(s, (struct sockaddr *)&sock, sizeof(sock))) {
         perror("connect");
-        return -1;
+        return EXIT_FAILURE;
     }
 
     printf("[+] Connected to proxy...\n");
@@ -71,7 +71,7 @@ int main(int argc, char *argv[]) {
         free(req);
         close(s);
 
-        return -1;
+        return EXIT_FAILURE;
     }
 
     res = (Res *)buf;
@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
             close(s);
             free(req);
 
-            return -1;
+            return EXIT_FAILURE;
     }
 
     printf("[+] Successfully connected through the proxy to"
@@ -104,5 +104,5 @@ int main(int argc, char *argv[]) {
     close(s);
     free(req);
 
-    return  0;
+    return  EXIT_SUCCESS;
 }
